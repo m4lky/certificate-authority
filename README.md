@@ -11,14 +11,13 @@ openssl --version
 
 ---
 
-## Setup
-
 ### Clone this repository
-
 ```bash
 git clone https://github.com/m4lky/certificate-authority.git
 cd certificate-authority
 ```
+
+## Setup
 
 ### 1 . Crete your Certificate Authority (CA)
 
