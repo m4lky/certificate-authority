@@ -1,9 +1,5 @@
 # Certificate Authority (CA)
-This is a repo that can be used to create your own Certificate Authority and sign certificates
-
-# How to create your own Certificate Authority and sign certificates with it  
-
-> Brief description of what this guide does.
+> This is a repo that can be used to create your own Certificate Authority and sign certificates
 
 ---
 
