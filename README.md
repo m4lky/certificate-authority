@@ -1,5 +1,5 @@
 # Certificate Authority (CA)
-> This is a repo that can be used to create your own Certificate Authority and sign certificates
+> This is a repo that can be used to create your own Certificate Authority and sign certificates using PKI
 
 ---
 
@@ -11,21 +11,51 @@ openssl --version
 
 ---
 
-## ⚙️ Setup
+## Setup
 
-### 1. Clone the repository
+### Clone this repository
 
 ```bash
 git clone https://github.com/m4lky/certificate-authority.git
 cd certificate-authority
 ```
 
-### 2. Install dependencies
+### 1 . Crete your Certificate Authority (CA)
+
+# Generate Private Key for CA
+The following command will generate a secure key called "ca.key"
 
 ```bash
-# example
-npm install
+openssl genrsa -out ca.key 2048
 ```
+
+#  Edit Configurtaion file 
+The Certificate Authority will be using the configuration settings from the files below
+
+ # ca.conf
+ Used to set the default configuration of the Certificate Authority.  You can leave this as default values
+
+ # req.ca.conf
+ Update the section below "my_req_distinguished_name" for your environment.  This will be used when we create the CA certificate associated with the CA
+
+ ```bash
+ [ my_req_distinguished_name ]
+ C=GB
+ ST=Scotland
+ L=Edinburgh
+ O=m4lky
+ OU=HomeCA
+ CN=certs.m4lky.com
+ ```
+
+# Generate certificate for CA private key
+
+The following command generates a CA certificate 
+
+```bash
+openssl req -new -x509 -key ca.key -days 3650 -config req.ca.conf -out ca.crt
+```
+
 
 ### 3. Configure environment
 
