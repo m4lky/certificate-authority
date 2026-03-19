@@ -17,6 +17,7 @@ cd certificate-authority
 ---
 
 ## Create the Certificate Authority (CA)
+The following steps for creating a CA is a one time operation.
 
 ### Generate Private Key for CA
 The following command will generate a secure private key for the CA called "ca.key" 
@@ -46,13 +47,35 @@ Update the section below "my_req_distinguished_name" for your environment.  This
  CN=certs.m4lky.com
  ```
 
-# Generate certificate for CA private key
-
-The following command generates a CA certificate 
+### Generate certificate for CA private key
+The following command generates a CA certificate `ca.crt` with a validity of 3650 days (10 years)
 
 ```bash
 openssl req -new -x509 -key ca.key -days 3650 -config req.ca.conf -out ca.crt
 ```
+
+### Summary of files
+You should now have the following files in the current working directory
+ - ca.key
+ - ca.crt
+
+### Adding the final files and directories for CA
+You will need to create a directory for your CA to ouput the certificates it generates
+```bash
+mkdir newcerts
+```
+
+You will also need to generate a file that will be used to track all certificates signed by CA
+```bash
+touch index.txt
+```
+
+Finally, you will need to create a database file for the certificate authority
+```bash
+echo '01' > serial
+```
+
+
 
 
 ### 3. Configure environment
