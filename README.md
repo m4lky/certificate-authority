@@ -8,14 +8,13 @@
 ```bash
 openssl --version
 ```
-
----
-
 ### Clone this repository
 ```bash
 git clone https://github.com/m4lky/certificate-authority.git
 cd certificate-authority
 ```
+
+---
 
 ## Crete your Certificate Authority (CA)
 
