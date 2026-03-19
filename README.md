@@ -1,8 +1,6 @@
 # Certificate Authority (CA)
 > This is a repo that can be used to create your own Certificate Authority and sign certificates using PKI
 
----
-
 ### Requirements
  - The only requirement is openssl.  Open your terminal and confirm using command below
 ```bash
