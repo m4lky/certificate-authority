@@ -52,10 +52,10 @@ The following command generates a CA certificate `ca.crt` with a validity of 365
 openssl req -new -x509 -key ca.key -days 3650 -config req.ca.conf -out ca.crt
 ```
 
-### Summary of files
-You should now have the following files in the current working directory
- - ca.key
- - ca.crt
+You can view the certificate using the following command
+```bash
+openssl x509 -in ca.crt -text
+```
 
 ### Adding the final files and directories for CA
 You will need to create a directory for your CA to ouput the certificates it generates
@@ -63,17 +63,24 @@ You will need to create a directory for your CA to ouput the certificates it gen
 mkdir newcerts
 ```
 
-You will also need to generate a file that will be used to track all certificates signed by CA
+You will also need to generate a file that will be used as a database of signed certs
 ```bash
 touch index.txt
 ```
 
-Finally, you will need to create a database file for the certificate authority
+Finally, you will need to create a file for tracking the certificates signed by the CA
 ```bash
 echo '01' > serial
 ```
 
+If you have followed this section you should now have the following files
+ - `ca.key` = private key for the CA
+ - `ca.crt` = certificate for the CA
+ - `newcerts` directory
+ - `index.txt`
+ - `serial` 
 
+---
 
 
 ### 3. Configure environment
