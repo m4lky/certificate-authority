@@ -16,7 +16,7 @@ cd certificate-authority
 
 ---
 
-## Crete your Certificate Authority (CA)
+## Create the Certificate Authority (CA)
 
 ### Generate Private Key for CA
 The following command will generate a secure private key for the CA called "ca.key" 
@@ -28,10 +28,10 @@ openssl genrsa -out ca.key 2048
 ###  Edit Configurtaion file 
 The Certificate Authority will be using the configuration settings from the files below
 
- - ca.conf
+ * ca.conf
  - Used to set the default configuration of the Certificate Authority.  You can leave this as default values
 
- - req.ca.conf
+ * req.ca.conf
  - Update the section below "my_req_distinguished_name" for your environment.  This will be used when we create the CA certificate associated with the CA
 
  ```bash
