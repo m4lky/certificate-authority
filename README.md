@@ -3,7 +3,7 @@
 
 ---
 
-## Requirements
+### Requirements
  - The only requirement is openssl.  Open your terminal and confirm using command below
 ```bash
 openssl --version
@@ -17,11 +17,10 @@ git clone https://github.com/m4lky/certificate-authority.git
 cd certificate-authority
 ```
 
-## Setup
-
+## Getting Started
 ### 1 . Crete your Certificate Authority (CA)
 
-### Generate Private Key for CA
+#### Generate Private Key for CA
 The following command will generate a secure key called "ca.key"
 
 ```bash
