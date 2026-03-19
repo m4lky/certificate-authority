@@ -3,11 +3,11 @@
 
 ---
 
-## 📌 Prerequisites
-
-- Requirement 1
-- Requirement 2
-- Requirement 3
+## Requirements
+ - The only requirement is openssl.  Open your terminal and confirm using command below
+```bash
+openssl --version
+```
 
 ---
 
