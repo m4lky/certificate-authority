@@ -17,11 +17,10 @@ git clone https://github.com/m4lky/certificate-authority.git
 cd certificate-authority
 ```
 
-## Getting Started
-### 1 . Crete your Certificate Authority (CA)
+## Crete your Certificate Authority (CA)
 
-#### Generate Private Key for CA
-The following command will generate a secure key called "ca.key"
+### Generate Private Key for CA
+The following command will generate a secure private key for the CA called "ca.key" 
 
 ```bash
 openssl genrsa -out ca.key 2048
